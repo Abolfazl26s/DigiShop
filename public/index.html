@@ -22,7 +22,7 @@
         </div>
      </div>
 
-     <!-- filter and sort mobile scetion -->
+    <!-- filter and sort mobile scetion -->
       <div class="flex md:hidden items-center justify-between px-4 gap-x-4 mb-9">
         <div class="bg-white shadow-md pl-0 rounded p-2 w-1/2  flex items-center flex-start">
             <div class="ml-2">
@@ -50,39 +50,53 @@
         </div>
       </div>
 
-      <!-- Product section -->
-       <div class="products grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
+    <!-- Product section -->
+    <div class="products grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
 
         <div class="p-2 rounded-xl overflow-hidden
-        h-72 shadow-sm mb-4 bg-stone-50">
-        <div class="img-p mb-4 w-full h-20">
-            <img src="" alt="">
-        </div>
-        <div class="brandAndColor w-full flex items-center justify-between py-4">
-            <span class="text-gray-400 text-sm">اپل</span>
-            <div class="color-product flex items-center">
-                <span class="w-4 h-4 rounded-full bg-red-400 border-solid border-slate-800"></span>
-                <span class="w-4 h-4 rounded-full bg-orange-400 border-solid border-slate-800"></span>
-                <span class="w-4 h-4 rounded-full bg-slate-400 border-solid border-slate-800"></span>
-                <span class="w-4 h-4 rounded-full bg-yellow-400 border-solid border-slate-800"></span>
-                <span class="w-5 h-5 rounded-full bg-teal-400 border-solid border-slate-800"></span>
+        shadow-sm mb-4 bg-stone-50">
+            <div class="img-p mb-4 w-full bg-gray-100 rounded">
+                <img class="top-0 " src="/assets/images/apple-watch-7.png" alt="">
+            </div>
+            <div class="brandAndColor w-full flex items-center justify-between mb-4">
+                <span class="text-gray-400 text-sm">اپل</span>
+                <div x-data="{color:'blue'}" class="color-product flex items-center">
+                    <div @click="color = 'red'" :class="color === 'red' ? 'ring-1 ring-red-400 z-10' : ' '" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white">
+                        <svg x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5 stroke-white text">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
+                    <div @click="color = 'green'" :class="color === 'green' ? 'ring-1 ring-green-400 z-10' : ' '" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-green-400 border-2 border-white">
+                        <svg x-show="color === 'green'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5 stroke-white text">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
+                    <div @click="color = 'blue'" :class="color === 'blue' ? 'ring-1 ring-blue-400 z-10' : ' '" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-blue-400 border-2 border-white">
+                        <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5 stroke-white text">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="title-p mb-4">
+                <h1 class="text-sm md:text-xl font-bold text-slate-800">ساعت هوشمند اپل  سری 6</h1>
+            </div>
+            <div class="price text-red-600 mb-4 flex items-center justify-end">
+                <span class="sm:text-xl">۱۲,۸۰۰,۰۰۰</span>
+                <span class="text-sm mr-1">تومان</span>
+            </div>
+            <div style="border-top: 1px solid #ccc;" class="w-full btn-order flex py-3 items-center justify-center">
+                <button type="button" class="text-md md:text-lg font-bold text-red-600">
+                    مشاهده و سفارش
+                </button>
             </div>
         </div>
-        <div class="title-p mb-4">
-            <h1 class="text-sm font-bold text-slate-800">ساعت هوشمند اپل  سری 6</h1>
-        </div>
-        <div class="price text-red-600 mb-4 flex items-center justify-end">
-            <span>48,280,000</span>
-            <span class="text-sm mr-1">تومان</span>
-        </div>
-        <div style="border-top: 1px solid #ccc;" class="btn-order w-full flex py-3 items-center justify-center">
-            <span class="text-md font-bold text-red-600">
-                مشاهده و سفارش
-            </span>
-        </div>
-        </div>
 
 
-       </div>
+    </div>
+
+
+    <!-- scripts -->
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>
