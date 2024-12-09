@@ -110,7 +110,7 @@
                 <section>
                     <div class="text-xl font-bold text-orange-500 mb-5">فیلتر</div>
                     <!-- Acc. No. 1 -->
-                    <div class="" x-data="{isOpenBrand:true}">
+                    <div class="mb-2" x-data="{isOpenBrand:false}">
                         <!-- ACC #1 header -->
                         <div @click="isOpenBrand = !isOpenBrand"
                             class="flex items-center justify-around  rounded-md cursor-pointer p-1 hover:bg-gray-50 mb-3">
@@ -128,7 +128,8 @@
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    :class="isOpenBrand === false ? 'rotate-180' : ''" class="size-5">
+                                    :class="isOpenBrand === false ? 'rotate-180' : 'text-orange-400'"
+                                    class="size-5  transition-all duration-500">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                                 </svg>
@@ -137,28 +138,59 @@
                         <!-- ACC #1 content -->
                         <div x-show="isOpenBrand === true" class="px-2 flex flex-col gap-y-3">
                             <label for="apple" class="flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" name="brand" id="apple">
+                                <input type="checkbox"
+                                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400" name="brand"
+                                    id="apple">
                                 <span class="mr-3">اپل</span>
                             </label>
                             <label for="xiaumi" class="flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" name="brand" id="xiaumi">
+                                <input type="checkbox"
+                                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400" name="brand"
+                                    id="xiaumi">
                                 <span class="mr-3">شیائومی</span>
                             </label>
                         </div>
                     </div>
                     <!-- Acc. No. 2 -->
-                    <div class="">
-                        <!-- ACC #2 header -->
-                        <div class=""></div>
-                        <!-- ACC #2 content -->
-                        <div class=""></div>
-                    </div>
-                    <!-- Acc. No. 3 -->
-                    <div class="">
-                        <!-- ACC #3 header -->
-                        <div class=""></div>
-                        <!-- ACC #3 content -->
-                        <div class=""></div>
+                    <div class="mb-2">
+                        <div class="" x-data="{isOpenColor:false}">
+                            <!-- ACC #2 header -->
+                            <div @click="isOpenColor = !isOpenColor"
+                                class="flex items-center justify-around  rounded-md cursor-pointer p-1 hover:bg-gray-50 mb-3">
+                                <div class="flex w-full items-center py-3 pr-1 ">
+                                    <span class="relative w-6 h-6 bg-slate-100 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="size-6 absolute -bottom-2 -left-1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" />
+                                        </svg>
+
+                                    </span>
+                                    <span class="mr-3">رنگ محصول</span>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        :class="isOpenColor === false ? 'rotate-180' : 'text-orange-400'"
+                                        class="size-5 transition-all duration-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- ACC #2 content -->
+                            <div x-show="isOpenColor === true" class="px-2 flex flex-col gap-y-3">
+                                <label for="red" class="flex items-center cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox rounded" name="color" id="red">
+                                    <span class="mr-3">قرمز</span>
+                                </label>
+                                <label for="yellow" class="flex items-center cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox rounded" name="color" id="yellow">
+                                    <span class="mr-3">زرد</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
