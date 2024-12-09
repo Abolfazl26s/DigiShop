@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigiShop</title>
     <link rel="stylesheet" href="./build/tailwind.css">
 </head>
+
 <body class="bg-gray-100">
     <!-- app bar -->
-     <div class="flex md:hidden justify-between items-center mt-10 mb-6 px-4">
+    <div class="flex md:hidden justify-between items-center mt-10 mb-6 px-4">
         <div>logo</div>
 
         <div class="text-lg font-bold text-slate-800">ساعت هوشمند</div>
 
         <div class="w-7 h7 bg-white rounded shadow-md flex items-center justify-center ">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 w-5 h-5 my-1 text-slate-800">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="size-5 w-5 h-5 my-1 text-slate-800">
                 <path fill-rule="evenodd"
                     d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
                     clip-rule="evenodd" />
             </svg>
         </div>
-     </div>
+    </div>
 
     <!-- filter and sort mobile scetion -->
     <div class="flex md:hidden items-center justify-between px-4 gap-x-4 mb-9">
         <div class="bg-white shadow-md pl-0 rounded p-2 w-1/2  flex items-center flex-start">
             <div class="ml-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="size-5 text-orange-600">
                     <path fill-rule="evenodd"
                         d="M2 3.75A.75.75 0 0 1 2.75 3h11.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 7.5a.75.75 0 0 1 .75-.75h7.508a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.5ZM14 7a.75.75 0 0 1 .75.75v6.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V7.75A.75.75 0 0 1 14 7ZM2 11.25a.75.75 0 0 1 .75-.75h4.562a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
                         clip-rule="evenodd" />
@@ -38,13 +42,12 @@
         </div>
         <div class="bg-white shadow-md pl-0 rounded p-2 w-1/2 flex items-center flex-start">
             <div class="ml-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                 viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor"
-                class="size-5 text-gray-400">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
-            </svg></div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-gray-400">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                </svg>
+            </div>
 
             <span class="text-sm text-slate-800">فیلتر: برند اپل</span>
         </div>
@@ -52,13 +55,121 @@
 
     <div class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-6">
         <!-- sidebar -->
-        <div class="bg-white hidden p-4 md:block col-span-4 lg:col-span-3 row-span-2">sidebar</div>
+        <div class="hidden md:block col-span-4 lg:col-span-3 row-span-2">
+            <div class="bg-white rounded-xl p-6">
+                <!-- categories -->
+                <section>
+                    <div class="text-xl font-bold text-orange-500 mb-5">دسته بندی</div>
+                    <ul>
+                        <li>
+                            <a href="#"
+                                class="flex w-full items-center py-3 pr-1 rounded-md cursor-pointer mb-1 hover:bg-gray-50 text-orange-400">
+                                <span class="relative w-6 h-6 bg-slate-300 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="size-6 absolute -bottom-2 -left-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                                    </svg>
+                                </span>
+                                <span class="mr-3">گوشی موبایل</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center py-3 pr-1 rounded-md cursor-pointer mb-1 hover:bg-gray-50 text-gray-400">
+                                <span class="relative w-6 h-6 bg-gray-100 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="size-6 absolute -bottom-2 -left-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                                    </svg>
+                                </span>
+                                <span class="mr-3">لب تاپ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center py-3 pr-1 rounded-md cursor-pointer mb-1 hover:bg-gray-50 text-gray-400">
+                                <span class="relative w-6 h-6 bg-gray-100 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="size-6 absolute -bottom-2 -left-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </span>
+                                <span class="mr-3">ساعت هوشمند</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <hr class="my-6">
+                <!-- filter -->
+                <section>
+                    <div class="text-xl font-bold text-orange-500 mb-5">فیلتر</div>
+                    <!-- Acc. No. 1 -->
+                    <div class="">
+                        <!-- ACC #1 header -->
+                        <div class="flex items-center justify-around  rounded-md cursor-pointer p-1 hover:bg-gray-50 mb-3">
+                            <div class="flex w-full items-center py-3 pr-1 ">
+                                <span class="relative w-6 h-6 bg-slate-300 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="size-6 absolute -bottom-2 -left-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                    </svg>
+                                </span>
+                                <span class="mr-3 font-bold">برند محصول</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- ACC #1 content -->
+                        <div class="px-2">
+                            <label for="apple" class="flex items-center py-2 cursor-pointer">
+                                <input type="checkbox" name="brand" id="apple">
+                                <span class="mr-3">اپل</span>
+                            </label>
+                            <label for="xiaumi" class="flex items-center py-2 cursor-pointer">
+                                <input type="checkbox" name="brand" id="xiaumi">
+                                <span class="mr-3">شیائومی</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Acc. No. 2 -->
+                    <div class="">
+                        <!-- ACC #2 header -->
+                        <div class=""></div>
+                        <!-- ACC #2 content -->
+                        <div class=""></div>
+                    </div>
+                    <!-- Acc. No. 3 -->
+                    <div class="">
+                        <!-- ACC #3 header -->
+                        <div class=""></div>
+                        <!-- ACC #3 content -->
+                        <div class=""></div>
+                    </div>
+                </section>
+            </div>
+        </div>
         <!-- sort section -->
         <div class="hidden md:block col-span-8 lg:col-span-9">
-            <div x-data="{sort: 1, activeClass: 'text-slate-800 font-bold'}" class="bg-white rounded-lg px-4 flex items-center gap-x-4 text-gray-400">
+            <div x-data="{sort: 1, activeClass: 'text-slate-800 font-bold'}"
+                class="bg-white rounded-lg px-4 flex items-center gap-x-4 text-gray-400">
                 <div class="bg-orange-100 p-1 rounded-md flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 stroke-orange-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-7 stroke-orange-600">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
                     </svg>
                 </div>
                 <button @click="sort = 1" :class="sort === 1 ? activeClass : ''" class="py-5 relative">
@@ -77,87 +188,101 @@
                     <span>پرفروش ترین</span>
                     <span x-show="sort === 4" class="w-2 h-2 rounded-full bg-orange-600 absolute top-2 left-0"></span>
                 </button>
-                
+
             </div>
         </div>
         <!-- Product section -->
         <div class="py-4 col-span-12 md:col-span-8 lg:col-span-9">
-            <div
-                 x-data="{
-        products:[
-        {id:1,
-        title:'ساعت هوشمند اپل سری ۷',
-        price:'۱۲,۸۰۰,۰۰۰',
-        colors:['red','green','blue',]},
-        {id:2,
-        title:'ساعت هوشمند اپل سری',
-        price:'۱۰,۸۰۰,۰۰۰',
-        colors:['red','green','blue',]},
-        {id:3,
-        title:'ساعت هوشمند اپل سری ۸',
-        price:'۱۴,۸۰۰,۰۰۰',
-        colors:['red','green','blue',]},
-        {id:4,
-        title:'ساعت هوشمند اپل سری ۱۰',
-        price:'۴۴,۸۰۰,۰۰۰',
-        colors:['red','green','blue',]},
-        {id:5,
-        title:'ساعت هوشمند اپل سری ۱۲',
-        price:'۶۰,۸۰۰,۰۰۰',
-        colors:['red','green','blue',]},
-        {id:6,
-        title:'ساعت هوشمند اپل سری ۴',
-        price:'۵,۸۰۰,۰۰۰',
-        colors:['red','green','blue',]},
-        ]
-     }" 
-    class="products grid gap-x-2 gap-y-4 md:gap-y-8 md:gap-x-6 sm:gap-x-4 grid-cols-2 
-     xl:grid-cols-4 px-4 md:p-0">
-            <!-- single product -->
-            <template x-for="product in products" :key="product.id">
-                <div class="p-2 rounded-xl overflow-hidden shadow-sm bg-stone-50">
-                    <div class="img-p mb-4 w-full bg-gray-100 rounded">
-                        <img class="top-0 " src="/assets/images/apple-watch-7.png" alt="">
-                    </div>
-                    <div class="brandAndColor w-full flex items-center justify-between mb-4">
-                        <span class="text-gray-400 text-sm">اپل</span>
-                        <div x-data="{color:'blue'}" class="color-product flex items-center">
-                            <div @click="color = 'red'" :class="color === 'red' ? 'ring-1 ring-red-400 z-10' : ' '" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white">
-                                <svg x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5 stroke-white text">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                </svg>
-                            </div>
-                            <div @click="color = 'green'" :class="color === 'green' ? 'ring-1 ring-green-400 z-10' : ' '" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-green-400 border-2 border-white">
-                                <svg x-show="color === 'green'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5 stroke-white text">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                </svg>
-                            </div>
-                            <div @click="color = 'blue'" :class="color === 'blue' ? 'ring-1 ring-blue-400 z-10' : ' '" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-blue-400 border-2 border-white">
-                                <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5 stroke-white text">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                </svg>
+            <div x-data="{
+                products:[
+                {id:1,
+                title:'ساعت هوشمند اپل سری ۷',
+                price:'۱۲,۸۰۰,۰۰۰',
+                colors:['red','green','blue',]},
+                {id:2,
+                title:'ساعت هوشمند اپل سری',
+                price:'۱۰,۸۰۰,۰۰۰',
+                colors:['red','green','blue',]},
+                {id:3,
+                title:'ساعت هوشمند اپل سری ۸',
+                price:'۱۴,۸۰۰,۰۰۰',
+                colors:['red','green','blue',]},
+                {id:4,
+                title:'ساعت هوشمند اپل سری ۱۰',
+                price:'۴۴,۸۰۰,۰۰۰',
+                colors:['red','green','blue',]},
+                {id:5,
+                title:'ساعت هوشمند اپل سری ۱۲',
+                price:'۶۰,۸۰۰,۰۰۰',
+                colors:['red','green','blue',]},
+                {id:6,
+                title:'ساعت هوشمند اپل سری ۴',
+                price:'۵,۸۰۰,۰۰۰',
+                colors:['red','green','blue',]},
+                ]
+                }" class="products grid gap-x-2 gap-y-4 md:gap-y-8 md:gap-x-6 sm:gap-x-4 grid-cols-2 
+            xl:grid-cols-4 px-4 md:p-0">
+                <!-- single product -->
+                <template x-for="product in products" :key="product.id">
+                    <div class="p-2 rounded-xl overflow-hidden shadow-sm bg-stone-50">
+                        <div class="img-p mb-4 w-full bg-gray-100 rounded">
+                            <img class="top-0 " src="/assets/images/apple-watch-7.png" alt="">
+                        </div>
+                        <div class="brandAndColor w-full flex items-center justify-between mb-4">
+                            <span class="text-gray-400 text-sm">اپل</span>
+                            <div x-data="{color:'blue'}" class="color-product flex items-center">
+                                <div @click="color = 'red'" :class="color === 'red' ? 'ring-1 ring-red-400 z-10' : ' '"
+                                    class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white">
+                                    <svg x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-4 sm:size-5 stroke-white text">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 12.75 6 6 9-13.5" />
+                                    </svg>
+                                </div>
+                                <div @click="color = 'green'"
+                                    :class="color === 'green' ? 'ring-1 ring-green-400 z-10' : ' '"
+                                    class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-green-400 border-2 border-white">
+                                    <svg x-show="color === 'green'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-4 sm:size-5 stroke-white text">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 12.75 6 6 9-13.5" />
+                                    </svg>
+                                </div>
+                                <div @click="color = 'blue'"
+                                    :class="color === 'blue' ? 'ring-1 ring-blue-400 z-10' : ' '"
+                                    class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-blue-400 border-2 border-white">
+                                    <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-4 sm:size-5 stroke-white text">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 12.75 6 6 9-13.5" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
+                        <div class="title-p mb-4">
+                            <h1 x-text="product.title" class="text-sm sm:text-lg font-bold text-slate-800"></h1>
+                        </div>
+                        <div class="price text-red-600 mb-4 flex items-center justify-end">
+                            <span x-text="product.price" class="sm:text-xl"></span>
+                            <span class="text-sm mr-1">تومان</span>
+                        </div>
+                        <div style="border-top: 1px solid #ccc;"
+                            class="w-full btn-order flex py-3 items-center justify-center">
+                            <button type="button" class="text-md md:text-lg font-bold text-red-600">
+                                مشاهده و سفارش
+                            </button>
+                        </div>
                     </div>
-                    <div class="title-p mb-4">
-                        <h1 x-text="product.title" class="text-sm sm:text-lg font-bold text-slate-800"></h1>
-                    </div>
-                    <div class="price text-red-600 mb-4 flex items-center justify-end">
-                        <span x-text="product.price" class="sm:text-xl"></span>
-                        <span class="text-sm mr-1">تومان</span>
-                    </div>
-                    <div style="border-top: 1px solid #ccc;" class="w-full btn-order flex py-3 items-center justify-center">
-                        <button type="button" class="text-md md:text-lg font-bold text-red-600">
-                            مشاهده و سفارش
-                        </button>
-                    </div>
-                </div>
-            </template>
-            </div>
+                </template>
             </div>
         </div>
+    </div>
 
     <!-- scripts -->
-     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
+
 </html>
