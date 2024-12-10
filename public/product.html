@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصول</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body class="bg-gray-100 sm:mb-4">
+
+    <!-- Navbar and search-->
+    <nav class="navbar z-20 sticky top-0 hidden md:block px-4 py-2 shadow-md bg-white mb-7">
+        <div class=" container 2xl:max-w-screen-2xl mx-auto flex items-center justify-between">
+            <!-- desktop: navbarItems and logo -->
+            <div class="flex items-center justify-start gap-x-3">
+                <!-- menu -->
+                <ul class="flex items-center justify-start gap-x-0 2xl:text-lg 2xl:gap-x-5 w-full text-slate-800">
+                    <li>
+                        <a href="#" class="block p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="99" height="26" fill="none">
+                                <path fill="#222F5D"
+                                    d="M8.74402 1.40941v4.01177H4.73226V1.40941h4.01176ZM10.6852 12.9788c.1725 0 .2588.0863.2588.2588v4.5036c0 .1725-.0863.2588-.2588.2588H9.6499c-.27607 0-.47451-.0086-.59529-.0259-.08627 1.2079-.33647 2.2345-.75059 3.08-.41412.8628-1.07843 1.6565-1.99294 2.3812-.89725.7247-2.15686 1.4839-3.77882 2.2776L.746376 21.7271c1.207844-.7247 2.053334-1.3114 2.536474-1.76.48313-.4487.77647-.8887.88-1.32.12078-.4314.18117-1.1302.18117-2.0965V7.49177h4.76235v4.91763c0 .1726.04314.3106.12942.4141.10353.1036.24157.1553.41411.1553h1.0353Zm8.672-.2329c0 .949-.2329 1.829-.6988 2.64-.4659.7937-1.0957 1.4321-1.8894 1.9153-.7938.4659-1.6738.6988-2.64.6988h-3.4424c-.1725 0-.2588-.0863-.2588-.2588v-4.5036c0-.1725.0863-.2588.2588-.2588h3.3906c.138 0 .2588-.0517.3624-.1553.1035-.1035.1552-.2329.1552-.3882V6.76706h4.7624v5.97884Zm.0518 7.3247v4.0118h-8.0236v-4.0118h8.0236ZM26.0939 18c-.9663 0-1.8463-.2329-2.64-.6988-.7937-.4832-1.4235-1.1216-1.8894-1.9153-.4659-.811-.6988-1.691-.6988-2.64V.322355h4.7623V12.4353c0 .1725.0431.3106.1294.4141.1035.0863.233.1294.3883.1294h1.5788c.1725 0 .2588.0863.2588.2588v4.5036c0 .1725-.0863.2588-.2588.2588h-1.6306ZM35.7977.684708V4.69647h-8.0235V.684708h8.0235ZM31.0354 6.76706h4.7623v5.97884c0 .949-.2329 1.829-.6988 2.64-.4659.7937-1.0957 1.4321-1.8894 1.9153-.7937.4659-1.6737.6988-2.64.6988h-2.847c-.1726 0-.2589-.0863-.2589-.2588v-4.5036c0-.1725.0863-.2588.2589-.2588h2.7952c.1381 0 .2589-.0517.3624-.1553.1035-.1035.1553-.2329.1553-.3882V6.76706Z" />
+                                <path fill="#FF755C"
+                                    d="M56.7374 12.9788c.1725 0 .2588.0863.2588.2588v4.5036c0 .1725-.0863.2588-.2588.2588h-.7247c.0345.3106.0517.5435.0517.6988 0 1.0353-.2588 1.993-.7764 2.873-.5177.88-1.2165 1.5702-2.0965 2.0706-.88.5176-1.8463.7764-2.8988.7764h-6.1083c-1.2768 0-2.4588-.3192-3.5458-.9576-1.0871-.6385-1.9498-1.5012-2.5883-2.5883-.6384-1.087-.9576-2.269-.9576-3.5458v-6.833h4.7623v6.5741c0 .6385.2243 1.182.673 1.6306.4659.4659 1.018.6988 1.6564.6988h6.1859c.2071 0 .3796-.069.5177-.207.138-.1381.207-.302.207-.4918 0-.1898-.069-.3537-.207-.4917-.1381-.1381-.3106-.2071-.5177-.2071h-5.6682v-5.0212h12.0353ZM56.739 18c-.1726 0-.2588-.0863-.2588-.2588v-4.5036c0-.1725.0862-.2588.2588-.2588h5.7976c1.1734 0 2.1742-.3623 3.0024-1.087l2.0447-1.8118-2.9765-1.44941c-.2415-.10353-.4313-.1553-.5694-.1553-.3106 0-.6212.13804-.9317.41412l-2.6918 2.97649-3.313-2.89884 2.7177-3.31294c.5522-.65569 1.1992-1.1302 1.9412-1.42353.7419-.31059 1.4839-.46588 2.2259-.46588.8627 0 1.6823.20706 2.4588.62117l5.5388 2.58824c.0863.03451.1553.05176.2071.05176h3.3388v4.65882h-3.313v.7247c0 .1726.0432.3106.1295.4141.1035.1036.2415.1553.4141.1553h3.2353c.1725 0 .2588.0863.2588.2588v4.5036c0 .1725-.0863.2588-.2588.2588h-3.2353c-1.0181 0-1.8549-.2416-2.5106-.7247-.6385-.5004-1.1647-1.2251-1.5788-2.1741l-.5177.5176c-.8627.7765-1.8376 1.3718-2.9247 1.7859-1.0871.3969-2.2.5953-3.3388.5953H56.739Zm3.2094 2.0706h4.0118v4.0118h-4.0118v-4.0118Zm24.7213-7.3247c0 .949-.233 1.829-.6988 2.64-.4659.7937-1.0957 1.4321-1.8894 1.9153-.7938.4659-1.6738.6988-2.64.6988h-3.4424c-.1725 0-.2588-.0863-.2588-.2588v-4.5036c0-.1725.0863-.2588.2588-.2588h3.3906c.138 0 .2588-.0517.3623-.1553.1036-.1035.1553-.2329.1553-.3882V6.76706h4.7624v5.97884Zm.0518 7.3247v4.0118h-8.0236v-4.0118h8.0236Zm8.3155-7.0918c.4486 0 .6729-.1812.6729-.5435 0-.138-.0518-.2502-.1553-.3365-.1035-.1035-.3451-.2847-.7247-.5435l-5.8235-4.01177 2.7176-3.93412 6.6 4.58118c.7075.55216 1.2424 1.13882 1.6047 1.76.3624.62121.5436 1.39761.5436 2.32941 0 1.0871-.2675 2.0706-.8024 2.9506-.5176.8627-1.2251 1.5443-2.1223 2.0447-.8973.4831-1.8722.7247-2.9248.7247h-6.4447v-5.0212h6.8589Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-4 rounded-md hover:bg-gray-50 transition-all duration-500">خانه</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-4 rounded-md hover:bg-gray-50 transition-all duration-500">تلفن
+                            همراه</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-4 rounded-md hover:bg-gray-50 transition-all duration-500">لب تاپ</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-4 rounded-md hover:bg-gray-50 transition-all duration-500">ساعت
+                            هوشمند</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- search section -->
+            <div class="flex-1 items-center max-w-2xl">
+                <form action=""
+                    class="flex items-center justify-start bg-gray-100 reletive rounded-full px-3 overflow-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+
+                    <input placeholder="جستجو کنید ..." class="focus:ring-0 form-input bg-transparent w-full
+                            p-2 border-0 text-slate-600" type="search" name="search" id="searchProduct">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- app bar -->
+    <div class="flex md:hidden justify-between items-center mt-10 mb-6 px-4">
+        <div class="w-7 h7 p-1 bg-white rounded shadow-md flex items-center justify-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </div>
+
+        <div class="text-md text-slate-800">گوشی آیفون ۱۳ پرومکس ۱۲۸ گیگابایت</div>
+
+        <div class="w-7 h7 bg-white rounded shadow-md flex items-center justify-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="size-5 w-5 h-5 my-1 text-slate-800">
+                <path fill-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- ‌‌‌‌BreadCrumbs -->
+    <div class="flex items-center px-4 text-sm gap-x-2 mb-8">
+        <span class="text-orange-500">تلفن همراه</span>
+        <span>
+            <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.944605 3.4002L0.950718 3.39393L0.956607 3.38744C1.32573 2.98098 2.02428 2.41465 2.78795 1.88531C3.55136 1.35614 4.3254 0.901635 4.83012 0.698268L4.83016 0.698361L4.83934 0.694445C4.9071 0.665556 5.04003 0.61522 5.18119 0.571599C5.32581 0.526911 5.43223 0.504193 5.48132 0.500091C5.61125 0.501917 5.73419 0.531367 5.85588 0.591925C6.003 0.679493 6.12099 0.81425 6.18635 0.968949C6.20654 1.02484 6.24286 1.16726 6.2795 1.33182C6.29674 1.40927 6.31191 1.48165 6.32269 1.53487C6.32679 1.55509 6.33016 1.57211 6.33272 1.58525L6.33888 1.61927C6.43995 2.17759 6.5 3.12151 6.5 4.1944C6.5 5.1935 6.44261 6.09319 6.36023 6.67441C6.35734 6.68665 6.3548 6.69859 6.35289 6.70772C6.34799 6.73122 6.34185 6.76265 6.33547 6.79526L6.33512 6.79707L6.33508 6.79727C6.3215 6.86672 6.30404 6.95608 6.28346 7.05153C6.26272 7.14774 6.23997 7.24476 6.2166 7.32844C6.20496 7.37013 6.19405 7.40533 6.18419 7.43347C6.17932 7.44738 6.17515 7.45831 6.17176 7.46654L6.16778 7.47582C6.16701 7.47751 6.16655 7.47846 6.16641 7.47874C6.1664 7.47875 6.1664 7.47876 6.1664 7.47876C6.02897 7.74713 5.76907 7.9 5.50794 7.9H5.48063C5.45851 7.89832 5.40766 7.89038 5.32578 7.86877C5.24294 7.8469 5.15072 7.81714 5.06198 7.78555C5.02814 7.7735 4.9956 7.76147 4.9652 7.74991L4.73986 7.65379C4.25814 7.44831 3.50692 7.0081 2.7622 6.49395C2.01557 5.97848 1.32584 5.4233 0.948006 5.00316L0.940361 4.99466L0.932428 4.98661L0.932424 4.98661L0.932391 4.98657L0.932366 4.98655L0.932336 4.98652L0.932191 4.98637L0.930758 4.98491L0.924312 4.9783L0.89904 4.9521C0.87732 4.92942 0.847428 4.89779 0.81482 4.86212C0.743684 4.78432 0.680493 4.70987 0.650976 4.66684L0.645463 4.65881L0.639642 4.65099C0.550658 4.53155 0.5 4.37359 0.5 4.2049C0.5 4.01976 0.55263 3.85755 0.644446 3.72749C0.665497 3.70453 0.691697 3.67525 0.717762 3.64612C0.731054 3.63127 0.744311 3.61645 0.756832 3.60253C0.815459 3.53737 0.882201 3.46426 0.944605 3.4002Z"
+                    stroke="#222F5D" />
+            </svg>
+        </span>
+        <span class="text-orange-500">برند اپل</span>
+        <span>
+            <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.944605 3.4002L0.950718 3.39393L0.956607 3.38744C1.32573 2.98098 2.02428 2.41465 2.78795 1.88531C3.55136 1.35614 4.3254 0.901635 4.83012 0.698268L4.83016 0.698361L4.83934 0.694445C4.9071 0.665556 5.04003 0.61522 5.18119 0.571599C5.32581 0.526911 5.43223 0.504193 5.48132 0.500091C5.61125 0.501917 5.73419 0.531367 5.85588 0.591925C6.003 0.679493 6.12099 0.81425 6.18635 0.968949C6.20654 1.02484 6.24286 1.16726 6.2795 1.33182C6.29674 1.40927 6.31191 1.48165 6.32269 1.53487C6.32679 1.55509 6.33016 1.57211 6.33272 1.58525L6.33888 1.61927C6.43995 2.17759 6.5 3.12151 6.5 4.1944C6.5 5.1935 6.44261 6.09319 6.36023 6.67441C6.35734 6.68665 6.3548 6.69859 6.35289 6.70772C6.34799 6.73122 6.34185 6.76265 6.33547 6.79526L6.33512 6.79707L6.33508 6.79727C6.3215 6.86672 6.30404 6.95608 6.28346 7.05153C6.26272 7.14774 6.23997 7.24476 6.2166 7.32844C6.20496 7.37013 6.19405 7.40533 6.18419 7.43347C6.17932 7.44738 6.17515 7.45831 6.17176 7.46654L6.16778 7.47582C6.16701 7.47751 6.16655 7.47846 6.16641 7.47874C6.1664 7.47875 6.1664 7.47876 6.1664 7.47876C6.02897 7.74713 5.76907 7.9 5.50794 7.9H5.48063C5.45851 7.89832 5.40766 7.89038 5.32578 7.86877C5.24294 7.8469 5.15072 7.81714 5.06198 7.78555C5.02814 7.7735 4.9956 7.76147 4.9652 7.74991L4.73986 7.65379C4.25814 7.44831 3.50692 7.0081 2.7622 6.49395C2.01557 5.97848 1.32584 5.4233 0.948006 5.00316L0.940361 4.99466L0.932428 4.98661L0.932424 4.98661L0.932391 4.98657L0.932366 4.98655L0.932336 4.98652L0.932191 4.98637L0.930758 4.98491L0.924312 4.9783L0.89904 4.9521C0.87732 4.92942 0.847428 4.89779 0.81482 4.86212C0.743684 4.78432 0.680493 4.70987 0.650976 4.66684L0.645463 4.65881L0.639642 4.65099C0.550658 4.53155 0.5 4.37359 0.5 4.2049C0.5 4.01976 0.55263 3.85755 0.644446 3.72749C0.665497 3.70453 0.691697 3.67525 0.717762 3.64612C0.731054 3.63127 0.744311 3.61645 0.756832 3.60253C0.815459 3.53737 0.882201 3.46426 0.944605 3.4002Z"
+                    stroke="#222F5D" />
+            </svg>
+
+        </span>
+        <span class="text-slate-500">آیفون ۱۳ پرومکس</span>
+    </div>
+
+    <!-- single product -->
+    <div class="px-4 w-full flex flex-col items-center gap-y-9">
+        <div class="w-4/5 max-w xs">
+            <img class="w-full h-auto" src="/assets/images/iphone-13.png" alt="iphone 13 promax">
+        </div>
+        <div>
+            <div class="mb-10 text-center">
+                <h1 class="text-slate-800 font-bold text-lg mb-2">گوشی آیفون ۱۳ ۱۲۸ گیگابایت</h1>
+                <h2 class="font-thin text-gray-500">Apple Iphone 13 promax</h2>
+            </div>
+            <!-- colors -->
+            <div class="brandAndColor w-full flex items-center justify-evenly mb-7">
+                <span class="text-slate-800 text-lg">انتخاب رنگ:</span>
+                <div x-data="{color:'blue'}" class="color-product flex items-center">
+                    <div @click="color = 'red'" :class="color === 'red' ? 'ring-1 ring-red-400 z-10' : ' '"
+                        class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white">
+                        <svg x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-4 sm:size-5 stroke-white text">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
+                    <div @click="color = 'green'" :class="color === 'green' ? 'ring-1 ring-green-400 z-10' : ' '"
+                        class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-green-400 border-2 border-white">
+                        <svg x-show="color === 'green'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="size-4 sm:size-5 stroke-white text">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
+                    <div @click="color = 'blue'" :class="color === 'blue' ? 'ring-1 ring-blue-400 z-10' : ' '"
+                        class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center -mr-1.5 rounded-full cursor-pointer bg-blue-400 border-2 border-white">
+                        <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="size-4 sm:size-5 stroke-white text">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- seller -->
+            <div class="flex flex-wrap items-center justify-center gap-6 mb-4">
+                <div class="flex items-center">
+                    <span class="relative ml-3 w-5 h-5 bg-gray-200 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-5 absolute -bottom-2 -left-1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+                        </svg>
+                    </span>
+                    <span>فروشنده:</span>
+                    <span class="text-sm text-slate-600 mr-3">دیجی تایز</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="relative ml-3 w-5 h-5 bg-gray-200 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-5 absolute -bottom-2 -left-1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                        </svg>
+
+                    </span>
+                    <span>گارانتی:</span>
+                    <span class="text-sm text-slate-600 mr-3">۱۸ ماه زرین خدمت</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="relative ml-3 w-5 h-5 bg-gray-200 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-5 absolute -bottom-2 -left-1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                        </svg>
+
+                    </span>
+                    <span>ارسال توسط:</span>
+                    <span class="text-sm text-slate-600 mr-3">انبار شیراز</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script defer src="/src/js/alpine.js"></script>
+</body>
+
+</html>
